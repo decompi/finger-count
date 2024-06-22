@@ -34,12 +34,6 @@ namespace finger_count
             _timer.Tick += Timer_Tick;
             _timer.Start();
         }
-
-        private void zoomSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            _zoomFactor = e.NewValue;
-        }
-
         private void Timer_Tick(object sender, EventArgs e)
         {
             using (Mat frame = _capture.QueryFrame())
